@@ -5,16 +5,17 @@
 
 int main()
 {
-	int n1, i;
+	int arrayLength;
+	int i;
 	int *array;
 	puts("Array length：");
-	scanf_s("%d", &n1);
-	array = (int*)malloc(n1*sizeof(int));//第一维
-	for (i = 0;i<n1;i++)
+	scanf_s("%d", &arrayLength);
+	array = (int *)malloc(arrayLength * sizeof (int));
+	for (i = 0;i < arrayLength; i++)
 	{
 		array[i] = i + 1;
 		printf("%d\t", array[i]);
 	}
-	free(array);//释放第一维指针
+	free(array);
 	return 0;
 }
